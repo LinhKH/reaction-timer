@@ -3,18 +3,18 @@
         {
             "title": "Ninja UX Designer",
             "id": 1,
-            "details": "lorem"
+            "details": "Designer"
         },
         {
             "title": "Ninja Web Developer",
             "id": 2,
-            "details": "lorem"
+            "details": "Web Developer"
         },
         {
             "title": "Ninja Vue Developer",
             "id": 3,
-            "details": "lorem"
+            "details": "Vue Developer"
         }
     ],
-    "blogs" : []
+    "blogs": []
 }
