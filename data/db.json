@@ -1,20 +1,23 @@
 {
-    "projects": [
-        {
-            "title": "Ninja UX Designer",
-            "id": 1,
-            "details": "Designer"
-        },
-        {
-            "title": "Ninja Web Developer",
-            "id": 2,
-            "details": "Web Developer"
-        },
-        {
-            "title": "Ninja Vue Developer",
-            "id": 3,
-            "details": "Vue Developer"
-        }
-    ],
-    "blogs": []
+  "projects": [
+    {
+      "title": "Ninja UX Designer",
+      "id": 1,
+      "details": "Designer",
+      "complete": true
+    },
+    {
+      "title": "Ninja Web Developer",
+      "id": 2,
+      "details": "Web Developer",
+      "complete": true
+    },
+    {
+      "title": "Ninja Vue Developer",
+      "id": 3,
+      "details": "Vue Developer",
+      "complete": false
+    }
+  ],
+  "blogs": []
 }
