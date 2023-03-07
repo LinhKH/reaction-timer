@@ -7,14 +7,18 @@
             #{{ tag }}
         </span>
     </div>
-    <div v-else>Loading...</div>
+    <div v-else><Spinner /></div>
 </template>
   
 <script>
 import getPost from '@/composables/getPost'
 
+// component imports
+import Spinner from '../components/Spinner.vue'
+
 export default {
     props: ['id'],
+    components: { Spinner },
     setup(props) {
         const { error, post, load } = getPost(props.id)
 
