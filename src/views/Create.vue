@@ -23,10 +23,12 @@
 //   - the endpoint is /posts to add a new post
 
 import { ref } from 'vue'
-import router from "@/router";
+// import router from "@/router";
+import { useRouter } from 'vue-router';
 
 export default {
     setup() {
+        const router = useRouter()
         const title = ref('')
         const body = ref('')
         const tags = ref([])
@@ -53,11 +55,11 @@ export default {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(post)
             }).then(() => {
+                // router.to('/')
+                // router.push({ name: 'Home' })
                 router.push('/')
             }).catch(function (error) {
-                if (error.response.status === 422) {
-                    self.$router.push({ name: "Home" });
-                }
+                console.log(error.message)
             });
         }
 
