@@ -1,24 +1,33 @@
 {
-    "posts": [
-        {
-            "id": 1,
-            "title": "welcome to the new blog",
-            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "tags": [
-                "webdev",
-                "coding",
-                "news"
-            ]
-        },
-        {
-            "id": 2,
-            "title": "top 5 CSS tips",
-            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "tags": [
-                "css",
-                "webdev",
-                "coding"
-            ]
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "welcome to the new blog",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "tags": [
+        "webdev",
+        "coding",
+        "news"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "top 5 CSS tips",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "tags": [
+        "css",
+        "webdev",
+        "coding"
+      ]
+    },
+    {
+      "id": 5782,
+      "title": "NodeJs",
+      "body": "Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser.",
+      "tags": [
+        "abc",
+        "def"
+      ]
+    }
+  ]
 }
