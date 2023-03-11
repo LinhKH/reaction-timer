@@ -4,7 +4,9 @@
         <div v-if="posts.length">
             <PostList :posts="posts" />
         </div>
-        <div v-else><Spinner /></div>
+        <div v-else>
+            <Spinner />
+        </div>
     </div>
 </template>
   
@@ -28,3 +30,11 @@ export default {
     },
 }
 </script>
+  
+<style>
+.home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+</style>

@@ -41,7 +41,6 @@ export default {
         }
 
         const handleSubmit = async () => {
-            let self = this;
             const post = {
                 id: Math.floor(Math.random() * 10000),
                 title: title.value,

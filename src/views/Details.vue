@@ -3,11 +3,10 @@
     <div v-if="post" class="post">
         <h3>{{ post.title }}</h3>
         <p class="pre">{{ post.body }}</p>
-        <span v-for="tag in post.tags" :key="tag">
-            #{{ tag }}
-        </span>
     </div>
-    <div v-else><Spinner /></div>
+    <div v-else>
+        <Spinner />
+    </div>
 </template>
   
 <script>
@@ -30,10 +29,6 @@ export default {
 </script>
   
 <style scoped>
-.tags a {
-    margin-right: 10px;
-}
-
 .post {
     max-width: 1200px;
     margin: 0 auto;
@@ -47,4 +42,5 @@ export default {
 
 .pre {
     white-space: pre-wrap;
-}</style>
+}
+</style>
