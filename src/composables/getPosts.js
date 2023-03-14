@@ -1,4 +1,5 @@
 import { ref } from 'vue'
+import { db, collection, getDocs } from "@/firebase/config";
 
 const getPosts = () => {
 
@@ -7,15 +8,10 @@ const getPosts = () => {
 
     const load = async () => {
         try {
-            // simulate delay
-            // await new Promise(resolve => {
-            //     setTimeout(resolve, 2000)
-            // })
-            let data = await fetch('http://localhost:3000/posts')
-            if (!data.ok) {
-                throw Error('no available data')
-            }
-            posts.value = await data.json()
+            const querySnapshot = await getDocs(collection(db, "posts"));
+            querySnapshot.forEach((doc) => {
+                posts.value.push({...doc.data(), id: doc.id})
+            });
         }
         catch (err) {
             error.value = err.message

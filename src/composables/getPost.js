@@ -1,4 +1,5 @@
 import { ref } from 'vue'
+import { db, doc, getDoc } from "@/firebase/config";
 
 const getPost = (id) => {
 
@@ -11,11 +12,15 @@ const getPost = (id) => {
             // await new Promise(resolve => {
             //     setTimeout(resolve, 2000)
             // })
-            let data = await fetch('http://localhost:3000/posts/' + id)
-            if (!data.ok) {
-                throw Error('That post does not exist')
+
+            const docRef = doc(db, "posts", id)
+            const docSnap = await getDoc(docRef);
+            if (docSnap.exists()) {
+                post.value = { ...docSnap.data(), id: id }
+            } else {
+                error.value = "Document does not exist"
             }
-            post.value = await data.json()
+
         }
         catch (err) {
             error.value = err.message

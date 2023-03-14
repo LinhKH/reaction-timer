@@ -25,6 +25,7 @@
 import { ref } from 'vue'
 // import router from "@/router";
 import { useRouter } from 'vue-router';
+import { db, collection, addDoc } from "@/firebase/config";
 
 export default {
     setup() {
@@ -44,23 +45,15 @@ export default {
 
         const handleSubmit = async () => {
             const post = {
-                id: Math.floor(Math.random() * 10000),
                 title: title.value,
                 body: body.value,
                 tags: tags.value
             }
 
-            await fetch('http://localhost:3000/posts', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(post)
-            }).then(() => {
-                // router.to('/')
-                // router.push({ name: 'Home' })
-                router.push('/')
-            }).catch(function (error) {
-                console.log(error.message)
-            });
+            // Add a new document with a generated id.
+            const docRef = await addDoc(collection(db, "posts"), post);
+            console.log("Document written with ID: ", docRef.id);
+            router.push('/')
         }
 
         return { body, title, tags, tag, handleKeydown, handleSubmit }
