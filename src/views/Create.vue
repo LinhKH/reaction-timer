@@ -25,7 +25,7 @@
 import { ref } from 'vue'
 // import router from "@/router";
 import { useRouter } from 'vue-router';
-import { db, collection, addDoc } from "@/firebase/config";
+import { db, collection, addDoc, serverTimestamp } from "@/firebase/config";
 
 export default {
     setup() {
@@ -47,7 +47,8 @@ export default {
             const post = {
                 title: title.value,
                 body: body.value,
-                tags: tags.value
+                tags: tags.value,
+                createdAt: serverTimestamp()
             }
 
             // Add a new document with a generated id.
