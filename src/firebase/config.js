@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { doc, collection, getDoc, getDocs, addDoc, deleteDoc, getFirestore, serverTimestamp } from "firebase/firestore";
+import { doc, collection, getDoc, getDocs, addDoc, deleteDoc, getFirestore, serverTimestamp, onSnapshot } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -18,4 +18,4 @@ const app = initializeApp(firebaseConfig);
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
 
-export { db, doc, deleteDoc, collection, addDoc, getDoc, getDocs, serverTimestamp }
+export { db, doc, deleteDoc, collection, addDoc, getDoc, getDocs, serverTimestamp, onSnapshot }
