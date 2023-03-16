@@ -41,6 +41,10 @@ nav p {
     color: #444;
 }
 
+nav button {
+    cursor: pointer;
+}
+
 nav p.email {
     font-size: 14px;
     color: #999;
